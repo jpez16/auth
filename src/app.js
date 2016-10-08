@@ -1,13 +1,31 @@
 import React, { Component } from 'react'
-import { View, Text } from 'react-native'
+import { View } from 'react-native'
+import firebase from 'firebase'
+import { Header } from './components/common'
+import { LoginForm } from './components'
 
 class App extends Component {
-    render() {
-        return(
-          <View>
-            <Text>Hi</Text>
-          </View>
-        )
-    }
+
+  componentWillMount() {
+    //firebase setup on app launch
+    const config = {
+        apiKey: "AIzaSyCCLibLKww1K_AA2litxH6qb_QxG5owLsY",
+        authDomain: "auth-6597f.firebaseapp.com",
+        databaseURL: "https://auth-6597f.firebaseio.com",
+        storageBucket: "auth-6597f.appspot.com",
+        messagingSenderId: "237968461508"
+      };
+      firebase.initializeApp(config);
+  }
+
+  render() {
+    return (
+      <View>
+        <Header>Authentication</Header>
+        <LoginForm />
+      </View>
+    )
+  }
 }
+
 export default App;
