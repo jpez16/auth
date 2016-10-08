@@ -61,4 +61,4 @@ const styles = {
     color: 'red'
   }
 }
-export { LoginForm }
+export default LoginForm;
