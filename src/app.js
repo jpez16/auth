@@ -8,6 +8,7 @@ class App extends Component {
 
   componentWillMount() {
     //firebase setup on app launch
+    console.log('0')
     const config = {
         apiKey: "AIzaSyCCLibLKww1K_AA2litxH6qb_QxG5owLsY",
         authDomain: "auth-6597f.firebaseapp.com",
